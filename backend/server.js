@@ -15,6 +15,8 @@ app.use(cors());
 app.use("/api/user", userRoutes);
 app.use('/api/admin', adminRoutes);
 
+
+// Db connection
 mongoose
   .connect(
     "mongodb+srv://nidhinbabu171:1921u0030@cluster0.wir2j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
@@ -31,5 +33,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(9000, () => {
-  console.log("Server started running on port 9000");
+  console.log("The Server started running on port 9000");
 });
